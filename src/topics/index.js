@@ -59,18 +59,21 @@ Topics.getTopics = async function (tids, options) {
     tids = await privileges.topics.filterTids('topics:read', tids, uid);
     return await Topics.getTopicsByTids(tids, options);
 };
-
-// Added query
-// params[in]: searched_title(what the user put in the search bar), type:string
-// cid (category id), type: number
-// params[out]: array of topic objects
+/*
+    @brief: To be used in to search for a topic in a specified category
+    @params[in]:
+        searched_title (what the user put in the search bar), type: string
+        cid (category id), type: number
+    @params[out]: topic object or null if no topic was found
+*/
 Topics.searchTopicByTitle = async function (searched_title, cid) {
+    // Array of strings that store all of the topic ids
     let tids = [];
     assert(typeof searched_title === 'string');
-    // we want all of the topics tids
     assert(Array.isArray(tids));
     assert(typeof cid === 'number');
     tids = await db.getSortedSetRange(`cid:${cid}:tids`, 0, -1);
+    // array of objects - each object has a tid (type:string) and title(type:string)
     const topics = [];
     assert(Array.isArray(topics));
     for (let i = 0; i < tids.length; i++) {
@@ -78,7 +81,15 @@ Topics.searchTopicByTitle = async function (searched_title, cid) {
         assert(typeof cur_tid === 'string');
         topics.push(db.getObjectFields(`topic:${cur_tid}`, ['tid', 'title']));
     }
+    // result_topics is an array of objects - each object has a tid (type:string) and title(type:string)
     const result_topics = await Promise.all(topics);
+    assert(Array.isArray(result_topics));
+    //keys is an array of strings
+    const keys = Object.keys(result_topics[0]);
+    assert(Array.isArray(keys));
+    // showing what fields are in each object in result_topics
+    assert(keys[0] === 'tid');
+    assert(keys[1] === 'title');
     let found_tid = '';
     assert(typeof found_tid === 'string');
     for (let t = 0; t < result_topics.length; t++) {
