@@ -5,6 +5,7 @@
     {{{end}}}
 </div>
 <div class="row">
+    <h1>This one</h1>
     <div class="category <!-- IF widgets.sidebar.length -->col-lg-9 col-sm-12<!-- ELSE -->col-lg-12<!-- ENDIF widgets.sidebar.length -->">
         <!-- IMPORT partials/category/subcategory.tpl -->
 
@@ -22,6 +23,7 @@
             </a>
 
             <span class="pull-right" component="category/controls">
+                <!-- IMPORT partials/category/search_bar.tpl -->
                 <!-- IMPORT partials/category/watch.tpl -->
                 <!-- IMPORT partials/category/sort.tpl -->
                 <!-- IMPORT partials/category/tools.tpl -->
