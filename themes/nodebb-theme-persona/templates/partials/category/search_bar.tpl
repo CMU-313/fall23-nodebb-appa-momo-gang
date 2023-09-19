@@ -1,4 +1,5 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
 <form id="search_query">
   <div class = "search_bar">
     <input class = "text_box" type="text" name="search_query" placeholder="Search...">
@@ -7,6 +8,7 @@
     </button>
   </div>
 </form>
+
 <style>
   .search_bar{
     display:flex;
