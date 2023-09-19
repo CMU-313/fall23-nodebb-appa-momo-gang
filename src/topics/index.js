@@ -13,6 +13,7 @@ const user = require('../user');
 const categories = require('../categories');
 const privileges = require('../privileges');
 const social = require('../social');
+// const types = require('../types');
 
 const Topics = module.exports;
 
@@ -61,23 +62,71 @@ Topics.getTopics = async function (tids, options) {
 
 // Added query
 // params[in]: searched_title(what the user put in the search bar), type:string
+// cid (category id), type: number
 // params[out]: array of topic objects
-Topics.searchTopicByTitle = async function (searched_title) {
-    let matched_topics = '';
-    const tid = 3;
+Topics.searchTopicByTitle = async function (searched_title, cid) {
+    let tids = [];
     console.log('I AM GETTING TO MY QUERY FUNCTION');
     assert(typeof searched_title === 'string');
     // we want all of the topics tids
-    assert(typeof matched_topics === 'string');
-    matched_topics = await db.getObjectField(`topic:${tid}`, 'title');
-    console.log('MATCHED TOPICS: %s', matched_topics);
-    console.log('Searched_title: %s', searched_title);
-    console.log(matched_topics === searched_title);
-    if (matched_topics === searched_title) {
-        console.log('POST FOUND');
-    } else {
-        console.log('POST NOT FOUND');
+    assert(Array.isArray(tids));
+    assert(typeof cid === 'number');
+    tids = await db.getSortedSetRange(`cid:${cid}:tids`, 0, -1);
+    console.log('TYPE OF TIDS');
+    console.log(typeof tids);
+    console.log(tids);
+    const topics = [];
+    assert(Array.isArray(topics));
+    for (let i = 0; i < tids.length; i++) {
+        const cur_tid = tids[i];
+        console.log(typeof cur_tid);
+        assert(typeof cur_tid === 'string');
+        // const topic_title = await db.getObjectField(`topic:${cur_tid}`, 'title');
+        topics.push(db.getObjectFields(`topic:${cur_tid}`, ['tid', 'title']));
+        // if (topic_title) {
+        //     // checking to make sure it is not null
+        //     assert(typeof topic_title === 'string');
+        //     if (topic_title === searched_title) {
+        //         const correct_topic = await db.getObject(`topic:${cur_tid}`);
+        //         assert(correct_topic instanceof types.TopicObject.toString());
+        //         console.log(typeof correct_topic);
+        //         console.log('PRINTING OUT THE TOPIC');
+        //         console.log(correct_topic);
+        //     }
+        // }
     }
+    const result_topics = await Promise.all(topics);
+    console.log('RESULT TITLES');
+    console.log(result_topics);
+    let found_tid = '';
+    assert(typeof found_tid === 'string');
+    for (let t = 0; t < result_topics.length; t++) {
+        assert(typeof result_topics[t].title === 'string');
+        if (result_topics[t].title === searched_title) {
+            assert(typeof result_topics[t].tid === 'string');
+            found_tid = result_topics[t].tid;
+        }
+    }
+    if (found_tid !== '') {
+        const correct_topic = await db.getObject(`topic:${found_tid}`);
+        // TO-DO FIGURE OUT HOW TO TYPE CHECK THIS //
+        // assert(correct_topic instanceof types.TopicObject.toString());
+        console.log('FOUND TOPIC:');
+        console.log(correct_topic);
+        return correct_topic;
+    }
+    console.log('TOPIC NOT FOUND');
+    return null;
+    // for (title in result_titles)
+    // matched_topics = await db.getObjectField(`topic:${tid}`, 'title');
+    // console.log('MATCHED TOPICS: %s', matched_topics);
+    // console.log('Searched_title: %s', searched_title);
+    // console.log(matched_topics === searched_title);
+    // if (matched_topics === searched_title) {
+    //     console.log('POST FOUND');
+    // } else {
+    //     console.log('POST NOT FOUND');
+    // }
 };
 
 Topics.getTopicsByTids = async function (tids, options) {

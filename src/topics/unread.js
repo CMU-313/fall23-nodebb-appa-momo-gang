@@ -48,7 +48,9 @@ module.exports = function (Topics) {
 
     Topics.unreadCutoff = async function (uid) {
         console.log('TOPICS UNREAD CUTOFF');
-        await Topics.searchTopicByTitle('Hello World');
+        await Topics.searchTopicByTitle('Hello World', 2);
+        await Topics.searchTopicByTitle('hey there', 2);
+        await Topics.searchTopicByTitle('Hello World', 4);
         const cutoff = Date.now() - (meta.config.unreadCutoff * 86400000);
         const data = await plugins.hooks.fire('filter:topics.unreadCutoff', { uid: uid, cutoff: cutoff });
         return parseInt(data.cutoff, 10);
@@ -181,6 +183,8 @@ module.exports = function (Topics) {
     }
 
     async function getCategoryTids(params) {
+        console.log('GET CATEGORY TIDS');
+        console.log(params);
         if (plugins.hooks.hasListeners('filter:topics.unread.getCategoryTids')) {
             const result = await plugins.hooks.fire('filter:topics.unread.getCategoryTids', { params: params, tids: [] });
             return result.tids;
