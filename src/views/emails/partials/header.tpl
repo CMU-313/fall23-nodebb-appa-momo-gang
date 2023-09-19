@@ -15,7 +15,6 @@
         <style>
             * {
                 font-family: sans-serif !important;
-                background-color:#000 !important;
             }
         </style>
     <![endif]-->
