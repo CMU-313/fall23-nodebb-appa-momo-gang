@@ -86,6 +86,7 @@ module.exports = function (module) {
     };
 
     module.getObjectField = async function (key, field) {
+        console.log('module.getObjectField is being called');
         if (!key) {
             return null;
         }
@@ -94,6 +95,7 @@ module.exports = function (module) {
         if (cachedData[key]) {
             return cachedData[key].hasOwnProperty(field) ? cachedData[key][field] : null;
         }
+        console.log(module.client.hget(key, String(field)));
         return await module.client.hget(key, String(field));
     };
 

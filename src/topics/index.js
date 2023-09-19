@@ -1,5 +1,6 @@
 'use strict';
 
+const assert = require('assert');
 const _ = require('lodash');
 const validator = require('validator');
 
@@ -58,6 +59,27 @@ Topics.getTopics = async function (tids, options) {
     return await Topics.getTopicsByTids(tids, options);
 };
 
+// Added query
+// params[in]: searched_title(what the user put in the search bar), type:string
+// params[out]: array of topic objects
+Topics.searchTopicByTitle = async function (searched_title) {
+    let matched_topics = '';
+    const tid = 3;
+    console.log('I AM GETTING TO MY QUERY FUNCTION');
+    assert(typeof searched_title === 'string');
+    // we want all of the topics tids
+    assert(typeof matched_topics === 'string');
+    matched_topics = await db.getObjectField(`topic:${tid}`, 'title');
+    console.log('MATCHED TOPICS: %s', matched_topics);
+    console.log('Searched_title: %s', searched_title);
+    console.log(matched_topics === searched_title);
+    if (matched_topics === searched_title) {
+        console.log('POST FOUND');
+    } else {
+        console.log('POST NOT FOUND');
+    }
+};
+
 Topics.getTopicsByTids = async function (tids, options) {
     if (!Array.isArray(tids) || !tids.length) {
         return [];
@@ -66,16 +88,8 @@ Topics.getTopicsByTids = async function (tids, options) {
     if (typeof options === 'object') {
         uid = options.uid;
     }
-
-//Added query
-//params[in]: searched_title(what the user put in the search bar), type:string
-//params[out]: array of topic objects
-Topics.searchTopicByTitle = async function (searched_title){
-    assert(typeof searched_title == 'string');
-    
-}
     async function loadTopics() {
-        console.log("TOPICSSSS")
+        console.log('TOPICSSSS');
         const topics = await Topics.getTopicsData(tids);
         const uids = _.uniq(topics.map(t => t && t.uid && t.uid.toString()).filter(v => utils.isNumber(v)));
         const cids = _.uniq(topics.map(t => t && t.cid && t.cid.toString()).filter(v => utils.isNumber(v)));
@@ -160,6 +174,8 @@ Topics.searchTopicByTitle = async function (searched_title){
     const hookResult = await plugins.hooks.fire('filter:topics.get', { topics: filteredTopics, uid: uid });
     return hookResult.topics;
 };
+
+
 
 Topics.getTopicWithPosts = async function (topicData, set, uid, start, stop, reverse) {
     const [

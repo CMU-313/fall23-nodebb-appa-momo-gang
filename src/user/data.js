@@ -74,7 +74,7 @@ module.exports = function (User) {
             users: users,
             fields: fields,
         });
-        console.log("HELLO WORLD");
+        console.log('HELLO WORLD');
         result.users.forEach((user, index) => {
             if (uniqueUids[index] > 0 && !user.uid) {
                 user.oldUid = uniqueUids[index];

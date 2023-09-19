@@ -47,11 +47,11 @@ module.exports = function (Topics) {
     };
 
     Topics.unreadCutoff = async function (uid) {
-        console.log("TOPICS UNREAD CUTOFF");
+        console.log('TOPICS UNREAD CUTOFF');
+        await Topics.searchTopicByTitle('Hello World');
         const cutoff = Date.now() - (meta.config.unreadCutoff * 86400000);
         const data = await plugins.hooks.fire('filter:topics.unreadCutoff', { uid: uid, cutoff: cutoff });
         return parseInt(data.cutoff, 10);
-
     };
 
     Topics.getUnreadTids = async function (params) {
@@ -92,7 +92,7 @@ module.exports = function (Topics) {
         if (params.uid <= 0) {
             return { counts: counts, tids: [], tidsByFilter: tidsByFilter };
         }
-        console.log("PLEASE PRINT OUT SOMETHING FOR TOPICS");
+        console.log('PLEASE PRINT OUT SOMETHING FOR TOPICS');
         params.cutoff = await Topics.unreadCutoff(params.uid);
 
         const [followedTids, ignoredTids, categoryTids, userScores, tids_unread] = await Promise.all([
