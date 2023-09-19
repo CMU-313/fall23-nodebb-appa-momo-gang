@@ -47,10 +47,12 @@ module.exports = function (Topics) {
     };
 
     Topics.unreadCutoff = async function (uid) {
-        console.log('TOPICS UNREAD CUTOFF');
+        console.log('TEST CASE 1, TOPIC: Hello World, CATEGORY: General Discussion');
         await Topics.searchTopicByTitle('Hello World', 2);
+        console.log('TEST CASE 2, TOPIC: hey there, CATEGORY: General Discussion');
         await Topics.searchTopicByTitle('hey there', 2);
-        await Topics.searchTopicByTitle('Hello World', 4);
+        console.log('TEST CASE 3, TOPIC: hey there, CATEGORY: Comments and Feedback');
+        await Topics.searchTopicByTitle('hey there', 4);
         const cutoff = Date.now() - (meta.config.unreadCutoff * 86400000);
         const data = await plugins.hooks.fire('filter:topics.unreadCutoff', { uid: uid, cutoff: cutoff });
         return parseInt(data.cutoff, 10);
@@ -94,7 +96,6 @@ module.exports = function (Topics) {
         if (params.uid <= 0) {
             return { counts: counts, tids: [], tidsByFilter: tidsByFilter };
         }
-        console.log('PLEASE PRINT OUT SOMETHING FOR TOPICS');
         params.cutoff = await Topics.unreadCutoff(params.uid);
 
         const [followedTids, ignoredTids, categoryTids, userScores, tids_unread] = await Promise.all([
@@ -183,8 +184,6 @@ module.exports = function (Topics) {
     }
 
     async function getCategoryTids(params) {
-        console.log('GET CATEGORY TIDS');
-        console.log(params);
         if (plugins.hooks.hasListeners('filter:topics.unread.getCategoryTids')) {
             const result = await plugins.hooks.fire('filter:topics.unread.getCategoryTids', { params: params, tids: [] });
             return result.tids;
