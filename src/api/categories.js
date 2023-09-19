@@ -16,7 +16,6 @@ categoriesAPI.get = async function (caller, data) {
     if (!category || !userPrivileges.read) {
         return null;
     }
-
     return category;
 };
 

@@ -67,7 +67,15 @@ Topics.getTopicsByTids = async function (tids, options) {
         uid = options.uid;
     }
 
+//Added query
+//params[in]: searched_title(what the user put in the search bar), type:string
+//params[out]: array of topic objects
+Topics.searchTopicByTitle = async function (searched_title){
+    assert(typeof searched_title == 'string');
+    
+}
     async function loadTopics() {
+        console.log("TOPICSSSS")
         const topics = await Topics.getTopicsData(tids);
         const uids = _.uniq(topics.map(t => t && t.uid && t.uid.toString()).filter(v => utils.isNumber(v)));
         const cids = _.uniq(topics.map(t => t && t.cid && t.cid.toString()).filter(v => utils.isNumber(v)));
