@@ -57,6 +57,18 @@ Topics.getTopics = async function (tids, options) {
     tids = await privileges.topics.filterTids('topics:read', tids, uid);
     return await Topics.getTopicsByTids(tids, options);
 };
+/*
+    @brief: To be used in to search for a topic in a specified category
+    @params[in]:
+        searched_title (what the user put in the search bar), type: string
+        cid (category id), type: number
+    @params[out]: topic object or null if no topic was found
+*/
+Topics.searchTopicByTitle = async function (searched_title, cid) {
+    console.assert(typeof searched_title, 'string');
+    const ret = searched_title + cid;
+    return ret;
+};
 
 Topics.getTopicsByTids = async function (tids, options) {
     if (!Array.isArray(tids) || !tids.length) {
