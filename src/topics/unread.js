@@ -47,12 +47,12 @@ module.exports = function (Topics) {
     };
 
     Topics.unreadCutoff = async function (uid) {
-        console.log('TEST CASE 1, TOPIC: Hello World, CATEGORY: General Discussion');
-        await Topics.searchTopicByTitle('Hello World', 2);
-        console.log('TEST CASE 2, TOPIC: hey there, CATEGORY: General Discussion');
-        await Topics.searchTopicByTitle('hey there', 2);
-        console.log('TEST CASE 3, TOPIC: hey there, CATEGORY: Comments and Feedback');
-        await Topics.searchTopicByTitle('hey there', 4);
+        // console.log('TEST CASE 1, TOPIC: Hello World, CATEGORY: General Discussion');
+        // await Topics.searchTopicByTitle('Hello World', 2);
+        // console.log('TEST CASE 2, TOPIC: hey there, CATEGORY: General Discussion');
+        // await Topics.searchTopicByTitle('hey there', 2);
+        // console.log('TEST CASE 3, TOPIC: hey there, CATEGORY: Comments and Feedback');
+        // await Topics.searchTopicByTitle('hey there', 4);
         const cutoff = Date.now() - (meta.config.unreadCutoff * 86400000);
         const data = await plugins.hooks.fire('filter:topics.unreadCutoff', { uid: uid, cutoff: cutoff });
         return parseInt(data.cutoff, 10);

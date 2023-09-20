@@ -84,7 +84,7 @@ Topics.searchTopicByTitle = async function (searched_title, cid) {
     // result_topics is an array of objects - each object has a tid (type:string) and title(type:string)
     const result_topics = await Promise.all(topics);
     assert(Array.isArray(result_topics));
-    //keys is an array of strings
+    // keys is an array of strings
     const keys = Object.keys(result_topics[0]);
     assert(Array.isArray(keys));
     // showing what fields are in each object in result_topics
@@ -102,12 +102,12 @@ Topics.searchTopicByTitle = async function (searched_title, cid) {
     if (found_tid !== '') {
         const correct_topic = await db.getObject(`topic:${found_tid}`);
         // TO-DO FIGURE OUT HOW TO TYPE CHECK THIS //
-        console.log('FOUND TOPIC:');
-        console.log(correct_topic);
-        return correct_topic;
+        // console.log('FOUND TOPIC:');
+        // console.log(correct_topic);
+        // return correct_topic;
     }
-    console.log('TOPIC NOT FOUND');
-    return null;
+    // console.log('TOPIC NOT FOUND');
+    // return null;
 };
 
 Topics.getTopicsByTids = async function (tids, options) {
