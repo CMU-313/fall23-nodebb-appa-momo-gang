@@ -65,7 +65,14 @@ Topics.getTopics = async function (tids, options) {
     @params[out]: topic object or null if no topic was found
 */
 Topics.searchTopicByTitle = async function (searched_title, cid) {
+    let tids = [];
     console.assert(typeof searched_title, 'string');
+    console.assert(typeof cid, 'number');
+    console.assert(Array.isArray(tids), true);
+    tids = await db.getSortedSetRange(`cid:${cid}:tids`, 0, -1);
+    // array of objects - each object has a tid (type:string) and title(type:string)
+    const topics = [];
+    console.assert(Array.isArray(topics), true);
     const ret = searched_title + cid;
     return ret;
 };
