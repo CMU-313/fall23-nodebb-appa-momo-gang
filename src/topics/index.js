@@ -73,8 +73,36 @@ Topics.searchTopicByTitle = async function (searched_title, cid) {
     // array of objects - each object has a tid (type:string) and title(type:string)
     const topics = [];
     console.assert(Array.isArray(topics), true);
-    const ret = searched_title + cid;
-    return ret;
+    for (let i = 0; i < tids.length; i++) {
+        const cur_tid = tids[i];
+        console.assert(typeof cur_tid, 'string');
+        topics.push(db.getObjectFields(`topic:${cur_tid}`, ['tid', 'title']));
+    }
+    // result_topics is an array of objects - each object has a tid (type:string) and title(type:string)
+    const result_topics = await Promise.all(topics);
+    console.assert(Array.isArray(result_topics), true);
+    const keys = Object.keys(result_topics[0]);
+    console.assert(Array.isArray(keys), true);
+    console.assert(keys[0], 'tid');
+    console.assert(keys[1], 'title');
+    let found_tid = '';
+    console.assert(typeof found_tid, 'string');
+    for (let t = 0; t < result_topics.length; t++) {
+        console.assert(typeof result_topics[t].title, 'string');
+        if (result_topics[t].title === searched_title) {
+            console.assert(typeof result_topics[t].tid, 'string');
+            found_tid = result_topics[t].tid;
+        }
+    }
+    if (found_tid !== '') {
+        const correct_topic = await db.getObject(`topic:${found_tid}`);
+        // TO-DO FIGURE OUT HOW TO TYPE CHECK THIS //
+        console.log('FOUND TOPIC:');
+        console.log(correct_topic);
+        return correct_topic;
+    }
+    console.log('TOPIC NOT FOUND');
+    return null;
 };
 
 Topics.getTopicsByTids = async function (tids, options) {
