@@ -9,7 +9,7 @@
         <!-- IMPORT partials/category/subcategory.tpl -->
 
         <div class="row topic-list-header clearfix">
-            <div class = "col-lg-4">
+            <div class = "col-lg-1">
                 <!-- IF privileges.topics:create -->
                 <a href="{config.relative_path}/compose?cid={cid}" component="category/post" id="new_topic" class="btn btn-primary" data-ajaxify="false" role="button">[[category:new_topic_button]]</a>
                 <!-- ELSE -->
@@ -21,7 +21,7 @@
                     <div class="alert alert-warning hide" id="new-topics-alert"></div>
                 </a>
             </div>
-            <div class = "col-lg-4">
+            <div class = "col-lg-7">
                 <!-- IMPORT partials/category/search_bar.tpl -->
             </div>
             <div class = "col-lg-4">

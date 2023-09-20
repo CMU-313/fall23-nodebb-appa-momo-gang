@@ -15,10 +15,12 @@
     gap:8px;
     border: 1px solid;
     border-color: #ccc;
+    width:300px;
+    margin-left:24px;
   }
 
   .text_box{
-    width:500px;
+    width:250px;
     border-radius:4px;
     border: 1px solid transparent;
     
