@@ -16,7 +16,7 @@
     border: 1px solid;
     border-color: #ccc;
     width:300px;
-    margin-left:24px;
+    margin-left:32px;
   }
 
   .text_box{

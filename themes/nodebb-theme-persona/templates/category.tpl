@@ -22,7 +22,9 @@
                 </a>
             </div>
             <div class = "col-lg-7">
+               
                 <!-- IMPORT partials/category/search_bar.tpl -->
+               
             </div>
             <div class = "col-lg-4">
                 <span class="pull-right" component="category/controls">
