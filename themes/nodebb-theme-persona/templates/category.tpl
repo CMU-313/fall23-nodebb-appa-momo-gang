@@ -8,24 +8,31 @@
     <div class="category <!-- IF widgets.sidebar.length -->col-lg-9 col-sm-12<!-- ELSE -->col-lg-12<!-- ENDIF widgets.sidebar.length -->">
         <!-- IMPORT partials/category/subcategory.tpl -->
 
-        <div class="topic-list-header clearfix">
-            <!-- IF privileges.topics:create -->
-            <a href="{config.relative_path}/compose?cid={cid}" component="category/post" id="new_topic" class="btn btn-primary" data-ajaxify="false" role="button">[[category:new_topic_button]]</a>
-            <!-- ELSE -->
-                <!-- IF !loggedIn -->
-                <a component="category/post/guest" href="{config.relative_path}/login" class="btn btn-primary">[[category:guest-login-post]]</a>
-                <!-- ENDIF !loggedIn -->
-            <!-- ENDIF privileges.topics:create -->
-
-            <a href="{url}" class="inline-block">
-                <div class="alert alert-warning hide" id="new-topics-alert"></div>
-            </a>
-
-            <span class="pull-right" component="category/controls">
-                <!-- IMPORT partials/category/watch.tpl -->
-                <!-- IMPORT partials/category/sort.tpl -->
-                <!-- IMPORT partials/category/tools.tpl -->
-            </span>
+        <div class="row topic-list-header clearfix">
+            <div class = "col-lg-1">
+                <!-- IF privileges.topics:create -->
+                <a href="{config.relative_path}/compose?cid={cid}" component="category/post" id="new_topic" class="btn btn-primary" data-ajaxify="false" role="button">[[category:new_topic_button]]</a>
+                <!-- ELSE -->
+                    <!-- IF !loggedIn -->
+                    <a component="category/post/guest" href="{config.relative_path}/login" class="btn btn-primary">[[category:guest-login-post]]</a>
+                    <!-- ENDIF !loggedIn -->
+                <!-- ENDIF privileges.topics:create -->
+                <a href="{url}" class="inline-block">
+                    <div class="alert alert-warning hide" id="new-topics-alert"></div>
+                </a>
+            </div>
+            <div class = "col-lg-7">
+               
+                <!-- IMPORT partials/category/search_bar.tpl -->
+               
+            </div>
+            <div class = "col-lg-4">
+                <span class="pull-right" component="category/controls">
+                    <!-- IMPORT partials/category/watch.tpl -->
+                    <!-- IMPORT partials/category/sort.tpl -->
+                    <!-- IMPORT partials/category/tools.tpl -->
+                </span>
+            </div>
         </div>
 
         <!-- IF !topics.length -->
