@@ -57,6 +57,75 @@ describe('Topic\'s', () => {
         };
     });
 
+    describe('.searchTopicByTitle', () => {
+        before(async () => {
+            await topics.post({ uid: adminUid, title: 'secret phrase 1', content: 'Content 123456', cid: categoryObj.cid });
+            await topics.post({ uid: adminUid, title: 'secret phrase 2 special', content: 'Content 234567', cid: categoryObj.cid });
+            await topics.post({ uid: adminUid, title: 'special search', content: 'Content 345678', cid: categoryObj.cid });
+        });
+
+        it('should return an array of topics containing the specified phrase in the title', async () => {
+            const searchResults = await topics.searchTopicByTitle('secret phrase', categoryObj.cid);
+
+            assert.equal(searchResults.length, 2);
+            assert(searchResults.some(topic => topic.title.includes('secret phrase 1')));
+            assert(searchResults.some(topic => topic.title.includes('secret phrase 2 special')));
+        });
+
+        it('should return everything if the search parameter is the empty string', async () => {
+            const searchResults = await topics.searchTopicByTitle('', categoryObj.cid);
+
+            assert.equal(searchResults.length, 3);
+            assert(searchResults.some(topic => topic.title.includes('secret phrase 1')));
+            assert(searchResults.some(topic => topic.title.includes('secret phrase 2 special')));
+            assert(searchResults.some(topic => topic.title.includes('special search')));
+        });
+
+        it('should return an empty array when no topics match the search phrase', async () => {
+            const searchResults = await topics.searchTopicByTitle('not secret phrase', categoryObj.cid);
+
+            assert.equal(searchResults.length, 0);
+        });
+
+        it('should only return array of topics with "search" in it', async () => {
+            const searchResults = await topics.searchTopicByTitle('search', categoryObj.cid);
+
+            assert.equal(searchResults.length, 1);
+            assert(searchResults.some(topic => topic.title.includes('special search')));
+        });
+
+        it('should not be case sensitive in searching for the phrase', async () => {
+            const searchResults = await topics.searchTopicByTitle('SeCreT pHRAsE', categoryObj.cid);
+            assert.equal(searchResults.length, 2);
+            assert(searchResults.some(topic => topic.title.includes('secret phrase 1')));
+            assert(searchResults.some(topic => topic.title.includes('secret phrase 2 special')));
+        });
+
+        it('should support search large amount of topics', async () => {
+            for (let i = 0; i < 50; i++) {
+                // Other code in this testfile uses this lint suppresser in order to conduct their tests
+                // This test is similar to the others which have this line as well
+                // eslint-disable-next-line no-await-in-loop
+                await topics.post({ uid: adminUid, title: `Topic ${i} with search phrase`, content: `Content ${i}`, cid: categoryObj.cid });
+            }
+
+            const searchResultsPage1 = await topics.searchTopicByTitle('search phrase', categoryObj.cid);
+            const searchResultsPage2 = await topics.searchTopicByTitle('1', categoryObj.cid);
+            const searchResultsPage3 = await topics.searchTopicByTitle('', categoryObj.cid);
+
+            assert.equal(searchResultsPage1.length, 50);
+            assert.equal(searchResultsPage2.length, 15);
+            assert.equal(searchResultsPage3.length, 53);
+            assert(searchResultsPage1.some(topic => topic.title.includes('Topic 10 with search phrase')));
+            assert(searchResultsPage1.some(topic => topic.title.includes('Topic 41 with search phrase')));
+            assert(searchResultsPage1.some(topic => topic.title.includes('Topic 0 with search phrase')));
+            assert(searchResultsPage2.some(topic => topic.title.includes('Topic 1 with search phrase')));
+            assert(searchResultsPage2.some(topic => topic.title.includes('Topic 10 with search phrase')));
+            assert(searchResultsPage2.some(topic => topic.title.includes('Topic 21 with search phrase')));
+            assert(searchResultsPage2.some(topic => topic.title.includes('Topic 11 with search phrase')));
+        });
+    });
+
     describe('.post', () => {
         it('should fail to create topic with invalid data', async () => {
             try {
