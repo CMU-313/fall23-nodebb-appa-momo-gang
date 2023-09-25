@@ -28,12 +28,6 @@ module.exports = function (Categories) {
         topics.calculateTopicIndices(topicsData, data.start);
 
         results = await plugins.hooks.fire('filter:category.topics.get', { cid: data.cid, topics: topicsData, uid: data.uid });
-        // ver 2 test
-        if (data.query.search_query) {
-            const searchQueryLowerCase = data.query.search_query.toLowerCase();
-            results.topics = results.topics.filter(x => x.title.toLowerCase().indexOf(searchQueryLowerCase) !== -1);
-        }        
-        // end ver 2
         return { topics: results.topics, nextStart: data.stop + 1 };
     };
 

@@ -1,6 +1,6 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
-<form id="search_query" action="{config.relative_path}/category/{../slug}" method="get">
+<form id="search_query">
   <div class = "search_bar">
     <input class = "text_box" type="text" name="search_query" placeholder="Search...">
     <button class = "submit_search btn" type="submit" aria-label="Search">
