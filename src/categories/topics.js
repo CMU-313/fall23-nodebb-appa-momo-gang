@@ -30,8 +30,9 @@ module.exports = function (Categories) {
         results = await plugins.hooks.fire('filter:category.topics.get', { cid: data.cid, topics: topicsData, uid: data.uid });
         // ver 2 test
         if (data.query.search_query) {
-            results.topics = results.topics.filter(x => x.title.indexOf(data.query.search_query) !== -1);
-        }
+            const searchQueryLowerCase = data.query.search_query.toLowerCase();
+            results.topics = results.topics.filter(x => x.title.toLowerCase().indexOf(searchQueryLowerCase) !== -1);
+        }        
         // end ver 2
         return { topics: results.topics, nextStart: data.stop + 1 };
     };
