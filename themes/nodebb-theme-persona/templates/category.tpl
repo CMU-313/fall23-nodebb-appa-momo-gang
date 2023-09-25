@@ -34,7 +34,6 @@
                 </span>
             </div>
         </div>
-
         <!-- IF !topics.length -->
         <!-- IF !search_query.length -->
         <!-- IF privileges.topics:create -->
@@ -42,17 +41,17 @@
         <div class="alert alert-warning" id="category-no-topics">
             [[category:no_topics]]
         </div>
+        <!-- ENDIF privileges.topics:create -->
         <!-- ENDIF !search_query.length -->
 
         <!-- IF search_query.length -->
         <!-- IF privileges.topics:create -->
         <hr class="visible-xs" />
-        <div class="alert alert-warnig" id="category-no-topics">
+        <div class="alert alert-warnig" id="category-no-search-results">
             [[category:no_search_result]]
         </div>
         <!-- ENDIF privileges.topics:create -->
         <!-- ENDIF search_query.length -->
-        <!-- ENDIF privileges.topics:create -->
         <!-- ENDIF !topics.length -->
 
         <!-- IMPORT partials/topics_list.tpl -->
