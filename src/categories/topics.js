@@ -28,11 +28,11 @@ module.exports = function (Categories) {
         topics.calculateTopicIndices(topicsData, data.start);
 
         results = await plugins.hooks.fire('filter:category.topics.get', { cid: data.cid, topics: topicsData, uid: data.uid });
-        //ver 2 test
-        if (data.query.search_query){
-            results.topics = results.topics.filter(x=>x.title.indexOf(data.query.search_query) != -1);
+        // ver 2 test
+        if (data.query.search_query) {
+            results.topics = results.topics.filter(x => x.title.indexOf(data.query.search_query) !== -1);
         }
-        //end ver 2
+        // end ver 2
         return { topics: results.topics, nextStart: data.stop + 1 };
     };
 
