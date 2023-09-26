@@ -34,14 +34,34 @@
                 </span>
             </div>
         </div>
-
         <!-- IF !topics.length -->
+        <!-- IF !search_query.length -->
         <!-- IF privileges.topics:create -->
         <hr class="visible-xs" />
         <div class="alert alert-warning" id="category-no-topics">
             [[category:no_topics]]
         </div>
         <!-- ENDIF privileges.topics:create -->
+        <!-- ENDIF !search_query.length -->
+
+        <!-- IF search_query.length -->
+        <!-- IF privileges.topics:create -->
+        <hr class="visible-xs" />
+        <div class="alert alert-warnig warning_search" id="category-no-search-results">
+            [[category:no_search_result]]
+        </div>
+        <style>
+        .warning_search{
+            width:100%;
+            background-color:#fcf8e3;
+            color: #8a6d3b;
+            border-color: #faebcc;
+
+        }
+        </style>
+
+        <!-- ENDIF privileges.topics:create -->
+        <!-- ENDIF search_query.length -->
         <!-- ENDIF !topics.length -->
 
         <!-- IMPORT partials/topics_list.tpl -->

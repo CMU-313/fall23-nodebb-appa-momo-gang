@@ -138,7 +138,7 @@ categoryController.get = async function (req, res, next) {
     });
 
     analytics.increment([`pageviews:byCid:${categoryData.cid}`]);
-
+    categoryData.search_query = req.query.search_query;
     res.render('category', categoryData);
 };
 

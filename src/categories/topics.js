@@ -12,6 +12,14 @@ module.exports = function (Categories) {
         let results = await plugins.hooks.fire('filter:category.topics.prepare', data);
         const tids = await Categories.getTopicIds(results);
         let topicsData = await topics.getTopicsByTids(tids, data.uid);
+        /*
+        let topicsData;
+        if (data.query.search_query){
+            topicsData= await topics.searchTopicByTitle(data.query.search_query, data.cid);
+        }else{
+            topicsData = await topics.getTopicsByTids(tids, data.uid);
+        }
+        */
         topicsData = await user.blocks.filter(data.uid, topicsData);
 
         if (!topicsData.length) {
