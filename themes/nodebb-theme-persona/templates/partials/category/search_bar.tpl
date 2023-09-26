@@ -1,10 +1,12 @@
+<!-- Font Awesome icon library to get the search Icon on our searchbar -->
+
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
 <form id="search_query" action="{config.relative_path}/category/{../slug}" method="get">
   <div class = "search_bar">
     <input class = "text_box" type="text" name="search_query" placeholder="Search...">
     <button class = "submit_search btn" type="submit" aria-label="Search">
-      <i class="fas fa-search"></i> <!-- You can use Font Awesome for the search icon -->
+      <i class="fas fa-search"></i> 
     </button>
   </div>
 </form>
