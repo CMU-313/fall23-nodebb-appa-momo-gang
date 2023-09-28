@@ -5,6 +5,7 @@
     "guest-login-post": "উত্তর দিতে লগিন করুন",
     "no_topics": "<strong>এই বিভাগে কোন আলোচনা নেই! </strong><br /> আপনি চাইলে নতুন আলোচনা শুরু করতে পারেন।",
     "browsing": "ব্রাউজিং",
+    "no_search_result":"<strong>There are no topics under this search.</strong><br />Why don't you try posting one?",
     "no_replies": "কোন রিপ্লাই নেই",
     "no_new_posts": "নতুন কোন পোস্ট নাই",
     "watch": "নজর রাখুন",

@@ -8,6 +8,7 @@
     "no_replies": "هیچ کسی پاسخ نداده است.",
     "no_new_posts": "هیچ پست جدیدی وجود ندارد.",
     "watch": "پیگیری",
+    "no_search_result":"<strong>There are no topics under this search.</strong><br />Why don't you try posting one?",
     "ignore": "نادیده گرفتن",
     "watching": "درحال پیگیری",
     "not-watching": "درحال پیگیری نیستید",

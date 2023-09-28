@@ -11,6 +11,7 @@
     "ignore": "Ignorera",
     "watching": "Bevakar",
     "not-watching": "Följer inte",
+    "no_search_result":"<strong>There are no topics under this search.</strong><br />Why don't you try posting one?",
     "ignoring": "Ignorerar",
     "watching.description": "Visa ämnen i olästa och senaste",
     "not-watching.description": "Visa inte ämnen i olästa, visa i senaste",

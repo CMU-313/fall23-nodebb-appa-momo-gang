@@ -11,6 +11,7 @@
     "ignore": "忽略",
     "watching": "已關注",
     "not-watching": "未關注",
+    "no_search_result":"<strong>There are no topics under this search.</strong><br />Why don't you try posting one?",
     "ignoring": "已忽略",
     "watching.description": "顯示未讀和最近的主題",
     "not-watching.description": "不顯示未讀主題，顯示最近主題",

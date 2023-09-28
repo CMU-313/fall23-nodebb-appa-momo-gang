@@ -11,6 +11,7 @@
     "ignore": "Ігнорувати",
     "watching": "Відстежується",
     "not-watching": "Не спостерігається",
+    "no_search_result":"<strong>There are no topics under this search.</strong><br />Why don't you try posting one?",
     "ignoring": "Ігнорувати",
     "watching.description": "Показати теми в непрочитаних та останніх",
     "not-watching.description": "Не показувати теми в непрочитаних, показувати в останніх",

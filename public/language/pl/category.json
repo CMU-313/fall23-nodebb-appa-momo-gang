@@ -10,6 +10,7 @@
     "watch": "Obserwuj",
     "ignore": "Ignoruj",
     "watching": "Obserwowane",
+    "no_search_result":"<strong>There are no topics under this search.</strong><br />Why don't you try posting one?",
     "not-watching": "Nie obserwowane",
     "ignoring": "Ignorowane",
     "watching.description": "Pokaż tematy w nieprzeczytanych i najnowszych",

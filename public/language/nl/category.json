@@ -10,6 +10,7 @@
     "watch": "Volgen",
     "ignore": "Negeren",
     "watching": "Volgend",
+    "no_search_result":"<strong>There are no topics under this search.</strong><br />Why don't you try posting one?",
     "not-watching": "Niet gevolgd",
     "ignoring": "Negerend",
     "watching.description": "Toon ongelezen en recente onderwerpen",

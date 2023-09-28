@@ -11,6 +11,7 @@
     "ignore": "Игнориши",
     "watching": "Надгледај",
     "not-watching": "Не надгледај",
+    "no_search_result":"<strong>There are no topics under this search.</strong><br />Why don't you try posting one?",
     "ignoring": "Игнориши",
     "watching.description": "Прикажи теме у непрочитаним и недавним",
     "not-watching.description": "Не приказуј теме у непрочитаним, прикажи у недавним",

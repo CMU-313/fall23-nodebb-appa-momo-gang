@@ -11,6 +11,7 @@
     "ignore": "Ignorar",
     "watching": "A seguir",
     "not-watching": "Não seguir",
+    "no_search_result":"<strong>There are no topics under this search.</strong><br />Why don't you try posting one?",
     "ignoring": "A ignorar",
     "watching.description": "Mostrar tópicos em \"não lidos\" e \"recentes\"",
     "not-watching.description": "Não mostrar tópicos em \"não lidos\", mostrar em \"recentes\"",

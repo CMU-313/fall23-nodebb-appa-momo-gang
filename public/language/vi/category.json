@@ -11,6 +11,7 @@
     "ignore": "Bỏ qua",
     "watching": "Đang xem",
     "not-watching": "Không xem",
+    "no_search_result":"<strong>There are no topics under this search.</strong><br />Why don't you try posting one?",
     "ignoring": "Bỏ qua",
     "watching.description": "Hiển thị chủ đề chưa đọc và gần đây",
     "not-watching.description": "Không hiển thị chủ đề trong chưa đọc, hiển thị gần đây",
