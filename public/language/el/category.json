@@ -5,6 +5,7 @@
     "guest-login-post": "Συνδέσου για να δημοσιεύσεις",
     "no_topics": "<strong>Δεν υπάρχουν θέματα σε αυτή την κατηγορία.</strong><br />Γιατί δεν δοκιμάζεις να δημοσιεύσεις ένα εσύ;",
     "browsing": "περιηγούνται",
+    "no_search_result":"<strong>There are no topics under this search.</strong><br />Why don't you try posting one?",
     "no_replies": "Κανείς δεν έχει απαντήσει",
     "no_new_posts": "Δεν υπάρχουν νέες δημοσιεύσεις",
     "watch": "Παρακολουθήστε",

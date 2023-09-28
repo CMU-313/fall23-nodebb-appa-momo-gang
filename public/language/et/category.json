@@ -8,6 +8,7 @@
     "no_replies": "Keegi pole vastanud",
     "no_new_posts": "Uusi postitusi pole",
     "watch": "Vaata",
+    "no_search_result":"<strong>There are no topics under this search.</strong><br />Why don't you try posting one?",
     "ignore": "Ignoreeri",
     "watching": "Vaatab",
     "not-watching": "Not Watching",

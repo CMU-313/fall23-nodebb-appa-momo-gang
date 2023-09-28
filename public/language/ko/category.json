@@ -12,6 +12,7 @@
     "watching": "관심 카테고리",
     "not-watching": "관심 해제 카테고리",
     "ignoring": "카테고리 무시",
+    "no_search_result":"<strong>There are no topics under this search.</strong><br />Why don't you try posting one?",
     "watching.description": "읽지 않음과 최근 목록에 화제 표시",
     "not-watching.description": "읽지 않음 제외, 최근 목록에만 화제 표시",
     "ignoring.description": "읽지 않음과 최근 목록에서 화제 제외",

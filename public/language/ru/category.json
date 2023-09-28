@@ -11,6 +11,7 @@
     "ignore": "Игнорировать",
     "watching": "Отслеживается",
     "not-watching": "Не отслеживается",
+    "no_search_result":"<strong>There are no topics under this search.</strong><br />Why don't you try posting one?",
     "ignoring": "Игнорируется",
     "watching.description": "Показывать темы из этой категории в списках непрочитанных и недавних",
     "not-watching.description": "Не показывать темы из этой категории в непрочитанных, но оставить в списке недавних",

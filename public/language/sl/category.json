@@ -11,6 +11,7 @@
     "ignore": "Prezri.",
     "watching": "Spremljano",
     "not-watching": "Ni spremljano",
+    "no_search_result":"<strong>There are no topics under this search.</strong><br />Why don't you try posting one?",
     "ignoring": "Prezrto",
     "watching.description": "Prikaži teme v nedavno in nazadnje",
     "not-watching.description": "Do not show topics in unread, show in recent",

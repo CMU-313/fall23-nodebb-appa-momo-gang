@@ -10,6 +10,7 @@
     "watch": "Դիտել",
     "ignore": "Անտեսել",
     "watching": "Դիտում",
+    "no_search_result":"<strong>There are no topics under this search.</strong><br />Why don't you try posting one?",
     "not-watching": "Չեն դիտում ",
     "ignoring": "Անտեսել",
     "watching.description": "Ցույց տալ թեմաները չկարդացված և վերջին բաժնում ",

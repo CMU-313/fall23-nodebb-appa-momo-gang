@@ -8,6 +8,7 @@
     "no_replies": "Kukaan ei ole vastannut",
     "no_new_posts": "Ei uusia viestejä",
     "watch": "Seuraa",
+    "no_search_result":"<strong>There are no topics under this search.</strong><br />Why don't you try posting one?",
     "ignore": "Sivuuta",
     "watching": "Seurataan",
     "not-watching": "Älä seuraa",

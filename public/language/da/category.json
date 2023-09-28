@@ -5,6 +5,7 @@
     "guest-login-post": "Log ind",
     "no_topics": "<strong>Der er ikke nogen nye emner i denne kategori.</strong><br /> Hvorfor  prøver du ikke at lave et?",
     "browsing": "browse",
+    "no_search_result":"<strong>There are no topics under this search.</strong><br />Why don't you try posting one?",
     "no_replies": "Ingen har svaret",
     "no_new_posts": "Ingen nye indlæg",
     "watch": "Overvåg",

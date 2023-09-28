@@ -8,6 +8,7 @@
     "no_replies": "Personne n'a répondu",
     "no_new_posts": "Pas de nouveau message",
     "watch": "S'abonner",
+    "no_search_result":"<strong>There are no topics under this search.</strong><br />Why don't you try posting one?",
     "ignore": "Ne plus surveiller",
     "watching": "Suivi",
     "not-watching": "Ne plus suivre",
