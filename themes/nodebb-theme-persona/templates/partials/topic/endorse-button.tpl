@@ -3,6 +3,12 @@
 </div>
 
 
+<style>
+#Notes topic/endorse or topic/endorse/container are used to get the route I believe.
+#Need to fix the privliges so only instructors can see it.
+
+
+</style>
 
 <!-- IF loggedIn -->
 <!-- IF !privileges.topics:reply -->
