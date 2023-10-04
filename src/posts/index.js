@@ -27,6 +27,25 @@ require('./queue')(Posts);
 require('./diffs')(Posts);
 require('./uploads')(Posts);
 
+/* Input : pid of the post to get endorsed status of
+ * Output : A string of whether the given pid's post is endorsed or not
+ *          'true' if it is, 'false' if not
+ */
+Posts.getEndorsed = async function (pid) {
+    console.assert(typeof pid, 'number');
+    return await db.get(`posts:${pid}:endorsed`);
+};
+
+/* Input : pid: the pid of the post to get endorsed status of
+ *         flag: a boolean representing whether to set the endorsed to true or false
+ */
+Posts.toggleSetEndorsed = async function (pid, flag) {
+    console.assert(typeof pid, 'number');
+    console.assert(typeof flag, 'boolean');
+    const value = flag ? 'true' : 'false';
+    await db.set(`posts:${pid}:endorsed`, value);
+};
+
 Posts.exists = async function (pids) {
     return await db.exists(
         Array.isArray(pids) ? pids.map(pid => `post:${pid}`) : `post:${pids}`
