@@ -76,7 +76,7 @@
     </a>
     {{{ end }}}
 
-    <small class="pull-right space">
+    <small class="pull-right">
         <!-- IMPORT partials/topic/reactions.tpl -->
         <div style = "display:flex; align-items:center;">
         <span class="post-tools" style="display: flex; justify-content: space-between; align-items: center;">
@@ -119,7 +119,6 @@
         </span>
        
         <!-- ENDIF !reputation:disabled -->
-       
         <!-- IMPORT partials/topic/post-menu.tpl -->
         </div>
     </small>
