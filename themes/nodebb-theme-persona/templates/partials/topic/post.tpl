@@ -78,7 +78,7 @@
 
     <small class="pull-right space">
         <!-- IMPORT partials/topic/reactions.tpl -->
-        <div style = "display:flex">
+        <div style = "display:flex; align-items:center;">
         <span class="post-tools" style="display: flex; justify-content: space-between; align-items: center;">
             <a component="post/reply" href="#" class="no-select <!-- IF !privileges.topics:reply -->hidden<!-- ENDIF !privileges.topics:reply -->">[[topic:reply]]</a>
             <a component="post/quote" href="#" class="no-select <!-- IF !privileges.topics:reply -->hidden<!-- ENDIF !privileges.topics:reply -->">[[topic:quote]]</a>
