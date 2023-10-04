@@ -76,11 +76,27 @@
     </a>
     {{{ end }}}
 
-    <small class="pull-right">
+    <small class="pull-right space">
         <!-- IMPORT partials/topic/reactions.tpl -->
-        <span class="post-tools">
+        <div style = "display:flex">
+        <span class="post-tools" style="display: flex; justify-content: space-between; align-items: center;">
             <a component="post/reply" href="#" class="no-select <!-- IF !privileges.topics:reply -->hidden<!-- ENDIF !privileges.topics:reply -->">[[topic:reply]]</a>
             <a component="post/quote" href="#" class="no-select <!-- IF !privileges.topics:reply -->hidden<!-- ENDIF !privileges.topics:reply -->">[[topic:quote]]</a>
+            <form>
+                 <button id = "endorse" type="submit" aria-label="Search">
+                    Endorse
+                </button>
+                <style>
+                    #endorse{
+                        background-color:transparent;
+                        outline:none;
+                        border: none; /* Remove the border */
+                        color: blue; /* Set the text color to blue */
+                        padding: 1rem 10px;
+                        text-decoration: none;
+                    }
+                </style>
+            </form>
         </span>
 
         <!-- IF !reputation:disabled -->
@@ -97,9 +113,11 @@
             </a>
             <!-- ENDIF !downvote:disabled -->
         </span>
+       
         <!-- ENDIF !reputation:disabled -->
 
         <!-- IMPORT partials/topic/post-menu.tpl -->
+        </div>
     </small>
     </div>
     <div component="post/replies/container"></div>
