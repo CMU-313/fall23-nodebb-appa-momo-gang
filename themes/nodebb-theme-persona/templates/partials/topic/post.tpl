@@ -83,7 +83,7 @@
             <a component="post/reply" href="#" class="no-select <!-- IF !privileges.topics:reply -->hidden<!-- ENDIF !privileges.topics:reply -->">[[topic:reply]]</a>
             <a component="post/quote" href="#" class="no-select <!-- IF !privileges.topics:reply -->hidden<!-- ENDIF !privileges.topics:reply -->">[[topic:quote]]</a>
             <form>
-                 <button id = "endorse" type="submit" aria-label="Search">
+                 <button id = "endorse" type="submit" aria-label="Endorse">
                     Endorse
                 </button>
                 <style>
@@ -91,9 +91,13 @@
                         background-color:transparent;
                         outline:none;
                         border: none; /* Remove the border */
-                        color: blue; /* Set the text color to blue */
+                        color: #337ab7; /* Set the text color to blue */
                         padding: 1rem 10px;
                         text-decoration: none;
+                    }
+
+                    #endorse:hover{
+                        color:#23527c;
                     }
                 </style>
             </form>
@@ -115,7 +119,7 @@
         </span>
        
         <!-- ENDIF !reputation:disabled -->
-
+       
         <!-- IMPORT partials/topic/post-menu.tpl -->
         </div>
     </small>
