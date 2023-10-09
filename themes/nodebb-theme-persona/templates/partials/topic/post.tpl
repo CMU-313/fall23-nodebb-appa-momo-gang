@@ -51,6 +51,12 @@
 
 <div class="content" component="post/content" itemprop="text">
     {posts.content}
+    <!-- IF posts.endorsed -->
+    <br>
+    <div style="color: green; text-align: center; font-weight: bold;">
+    ~An instructor has endorsed this post~
+    </div>
+    <!-- ENDIF posts.endorsed -->
 </div>
 
 <div class="post-footer">
