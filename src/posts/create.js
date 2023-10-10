@@ -56,6 +56,7 @@ module.exports = function (Posts) {
 
         await Promise.all([
             db.sortedSetAdd('posts:pid', timestamp, postData.pid),
+            db.set(`posts:${postData.pid}:endorsed`, 'false'),
             db.incrObjectField('global', 'postCount'),
             user.onNewPostMade(postData),
             topics.onNewPostMade(postData),

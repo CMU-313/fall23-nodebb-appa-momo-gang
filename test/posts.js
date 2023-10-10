@@ -302,6 +302,27 @@ describe('Post\'s', () => {
         });
     });
 
+    describe('endorsing', () => {
+        it('should endorse a post', async () => {
+            await posts.toggleSetEndorsed(postData.pid, true);
+            const endorsed = await posts.getEndorsed(postData.pid);
+            console.assert(typeof endorsed, 'string');
+            assert.equal(endorsed, 'true');
+        });
+
+        it('should unendorse a post', async () => {
+            await posts.toggleSetEndorsed(postData.pid, true);
+            const endorsed = await posts.getEndorsed(postData.pid);
+            console.assert(typeof endorsed, 'string');
+            assert.equal(endorsed, 'true');
+
+            await posts.toggleSetEndorsed(postData.pid, false);
+            const unendorsed = await posts.getEndorsed(postData.pid);
+            console.assert(typeof unendorsed, 'string');
+            assert.equal(unendorsed, 'false');
+        });
+    });
+
     describe('post tools', () => {
         it('should error if data is invalid', (done) => {
             socketPosts.loadPostTools({ uid: globalModUid }, null, (err) => {
