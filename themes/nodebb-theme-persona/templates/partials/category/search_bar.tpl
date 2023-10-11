@@ -2,14 +2,31 @@
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
-<form id="search_query" action="{config.relative_path}/category/{../slug}" method="get">
-  <div class = "search_bar">
-    <input class = "text_box" type="text" name="search_query" placeholder="Search...">
-    <button class = "submit_search btn" type="submit" aria-label="Search">
-      <i class="fas fa-search"></i> 
+<form id="search_query" method="get">
+  <div class="search_bar">
+    <input class="text_box" type="text" name="search_query" id="search_query_input" placeholder="Search">
+    <button class="submit_search btn" type="submit" aria-label="Search">
+      <i class="fas fa-search"></i>
     </button>
   </div>
 </form>
+
+<script>
+  // Function to save the input value to localStorage
+  function saveInputValue() {
+    var inputElement = document.getElementById('search_query_input');
+    var inputValue = inputElement.value;
+    localStorage.setItem('searchQuery', inputValue);
+  }
+
+  
+
+</script>
+
+
+
+
+
 
 <style>
   .search_bar{
@@ -19,6 +36,7 @@
     border-color: #ccc;
     width:300px;
     margin-left:32px;
+    boarder:none;
   }
 
   .text_box{
