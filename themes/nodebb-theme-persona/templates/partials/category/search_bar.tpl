@@ -35,7 +35,10 @@
     document.getElementById('search_query').submit();
   });
 
-
+  // Initialize the input value when the page loads
+  setInputValue();
+  // Auto-select the input text when the page loads
+  inputElement.focus();
 
 </script>
 
