@@ -19,7 +19,15 @@
     localStorage.setItem('searchQuery', inputValue);
   }
 
-  
+  // Function to retrieve and set the input value from localStorage
+  function setInputValue() {
+    var inputElement = document.getElementById('search_query_input');
+    var savedValue = localStorage.getItem('searchQuery');
+    if (savedValue !== null) {
+      inputElement.value = savedValue;
+    }
+  }
+
 
 </script>
 
