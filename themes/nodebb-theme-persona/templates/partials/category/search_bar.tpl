@@ -28,6 +28,14 @@
     }
   }
 
+  // Add an event listener to save the input value on input change
+  var inputElement = document.getElementById('search_query_input');
+  inputElement.addEventListener('input', function () {
+    saveInputValue();
+    document.getElementById('search_query').submit();
+  });
+
+
 
 </script>
 
