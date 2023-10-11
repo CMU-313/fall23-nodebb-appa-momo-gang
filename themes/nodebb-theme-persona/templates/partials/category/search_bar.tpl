@@ -23,8 +23,9 @@
   function setInputValue() {
     var inputElement = document.getElementById('search_query_input');
     var savedValue = localStorage.getItem('searchQuery');
-    if (savedValue !== null) {
+    if (savedValue !== "") {
       inputElement.value = savedValue;
+      inputElement.focus();
     }
   }
 
@@ -38,7 +39,7 @@
   // Initialize the input value when the page loads
   setInputValue();
   // Auto-select the input text when the page loads
-  inputElement.focus();
+  
 
 </script>
 
