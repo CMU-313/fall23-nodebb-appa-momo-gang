@@ -82,7 +82,7 @@
         <span class="post-tools" style="display: flex; justify-content: space-between; align-items: center;">
             <a component="post/reply" href="#" class="no-select <!-- IF !privileges.topics:reply -->hidden<!-- ENDIF !privileges.topics:reply -->">[[topic:reply]]</a>
             <a component="post/quote" href="#" class="no-select <!-- IF !privileges.topics:reply -->hidden<!-- ENDIF !privileges.topics:reply -->">[[topic:quote]]</a>
-           
+            <form>
                  <button id = "endorse" type="submit" aria-label="Endorse">
                     Endorse
                 </button>
@@ -100,18 +100,7 @@
                         color:#23527c;
                     }
                 </style>
-           
-          
-            <script>
-                //var config = JSON.parse('{{configJSON}}');
-                //ar app = {
-                //    user: JSON.parse('{{userJSON}}')
-                //};
-                const userController = require('./path-to-user-controller'); // Replace with the actual path to your user controller file
-
-                // Inside your view or route handler
-                const currentUserData = await userController.getCurrentUser(req, res);
-            </script>
+            </form>
         </span>
 
         <!-- IF !reputation:disabled -->
