@@ -15,14 +15,18 @@
   // Function to save the input value to localStorage
   function saveInputValue() {
     var inputElement = document.getElementById('search_query_input');
-    var inputValue = inputElement.value;
+    var inputValue = inputElement.value.toString();
+    console.assert(typeof inputValue, 'string');
     localStorage.setItem('searchQuery', inputValue);
   }
 
   // Function to retrieve and set the input value from localStorage
   function setInputValue() {
     var inputElement = document.getElementById('search_query_input');
-    var savedValue = localStorage.getItem('searchQuery');
+    var savedValue = localStorage.getItem('searchQuery').toString();
+    console.log(savedValue);
+    console.log(typeof savedValue);
+    console.assert(typeof savedValue, 'string');
     if (savedValue !== "") {
       inputElement.value = savedValue;
       inputElement.focus();
