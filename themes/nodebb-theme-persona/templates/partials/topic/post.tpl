@@ -90,7 +90,11 @@
             <a component="post/quote" href="#" class="no-select <!-- IF !privileges.topics:reply -->hidden<!-- ENDIF !privileges.topics:reply -->">[[topic:quote]]</a>
             <form>
                  <button id = "endorse" type="submit" aria-label="Endorse">
-                    Endorse
+                    <!-- IF !posts.endorsed -->
+                        Endorse
+                    <!-- ELSE -->
+                        Unendorse
+                    <!-- END IF !posts.endorsed -->
                 </button>
                 <style>
                     #endorse{
