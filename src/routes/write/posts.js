@@ -31,5 +31,7 @@ module.exports = function () {
     setupApiRoute(router, 'put', '/:pid/diffs/:since', [...middlewares, middleware.assert.post], controllers.write.posts.restoreDiff);
     setupApiRoute(router, 'delete', '/:pid/diffs/:timestamp', [...middlewares, middleware.assert.post], controllers.write.posts.deleteDiff);
 
+    setupApiRoute(router, 'put', '/:pid/endorse', [...middlewares, middleware.assert.post], controllers.write.posts.endorse);
+    setupApiRoute(router, 'delete', '/:pid/endorse', [...middlewares, middleware.assert.post], controllers.write.posts.unendorse);
     return router;
 };

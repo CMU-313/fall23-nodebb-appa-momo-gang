@@ -116,6 +116,10 @@ define('forum/topic/postTools', [
             return bookmarkPost($(this), getData($(this), 'data-pid'));
         });
 
+        postContainer.on('click', '[component="post/endorse"]', function () {
+            onEndorseClicked($(this), getData($(this), 'data-pid'));
+        });
+
         postContainer.on('click', '[component="post/upvote"]', function () {
             return votes.toggleVote($(this), '.upvoted', 1);
         });
