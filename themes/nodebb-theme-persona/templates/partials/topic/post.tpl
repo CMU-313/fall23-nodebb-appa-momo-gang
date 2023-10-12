@@ -82,8 +82,8 @@
         <span class="post-tools" style="display: flex; justify-content: space-between; align-items: center;">
             <a component="post/reply" href="#" class="no-select <!-- IF !privileges.topics:reply -->hidden<!-- ENDIF !privileges.topics:reply -->">[[topic:reply]]</a>
             <a component="post/quote" href="#" class="no-select <!-- IF !privileges.topics:reply -->hidden<!-- ENDIF !privileges.topics:reply -->">[[topic:quote]]</a>
-            <form id = "endorse_button" action = {config.relative_path}/category>
-                 <button id = "endorse" type="submit" aria-label="Endorse">
+            <form" >
+                 <button id = "endorse" type="submit" aria-label="Endorse", onclick="toggleSetEndorsed()">
                     Endorse
                 </button>
                 <style>
