@@ -1,6 +1,8 @@
 'use strict';
 
 
+const posts = require('../../../../src/posts');
+
 define('forum/topic/postTools', [
     'share',
     'navigator',
@@ -116,9 +118,9 @@ define('forum/topic/postTools', [
             return bookmarkPost($(this), getData($(this), 'data-pid'));
         });
 
-        // postContainer.on('click', '[component="post/endorse"]', function () {
-        //     posts.toggleSetEndorsedt($(this), getData($(this), 'data-pid'));
-        // });
+        postContainer.on('click', '[component="post/endorse"]', function () {
+            posts.toggleSetEndorsed($(this), getData($(this), 'data-pid'));
+        });
 
         postContainer.on('click', '[component="post/upvote"]', function () {
             return votes.toggleVote($(this), '.upvoted', 1);

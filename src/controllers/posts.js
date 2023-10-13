@@ -27,10 +27,6 @@ postsController.redirectToPost = async function (req, res, next) {
 
     const qs = querystring.stringify(req.query);
     helpers.redirect(res, qs ? `${path}?${qs}` : path);
-
-    if (data.query.endorse_button) {
-
-    }
 };
 
 postsController.getRecentPosts = async function (req, res) {
