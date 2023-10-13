@@ -89,6 +89,7 @@
             <a component="post/reply" href="#" class="no-select <!-- IF !privileges.topics:reply -->hidden<!-- ENDIF !privileges.topics:reply -->">[[topic:reply]]</a>
             <a component="post/quote" href="#" class="no-select <!-- IF !privileges.topics:reply -->hidden<!-- ENDIF !privileges.topics:reply -->">[[topic:quote]]</a>
             <form>
+                 <button id = "endorse" type="submit" aria-label="Endorse", onclick="toggleSetEndorsed()">
                  <button id = "endorse" type="submit" aria-label="Endorse">
                     <!-- IF !posts.endorsed -->
                         Endorse

@@ -46,6 +46,18 @@ Posts.toggleSetEndorsed = async function (pid, flag) {
     await db.set(`posts:${pid}:endorsed`, value);
 };
 
+Posts.endorsed = async function (pid, uid) {
+    console.assert(typeof pid, 'number');
+    console.assert(typeof uid, 'number');
+    await db.set(`posts:${pid}:endorsed`, true);
+};
+
+Posts.unendorsed = async function (pid, uid) {
+    console.assert(typeof pid, 'number');
+    console.assert(typeof uid, 'number');
+    await db.set(`posts:${pid}:endorsed`, false);
+};
+
 Posts.exists = async function (pids) {
     return await db.exists(
         Array.isArray(pids) ? pids.map(pid => `post:${pid}`) : `post:${pids}`

@@ -18,7 +18,7 @@ define('forum/topic/events', [
         'event:user_status_change': onUserStatusChange,
         'event:voted': updatePostVotesAndUserReputation,
         'event:bookmarked': updateBookmarkCount,
-
+        'event:endorsed': postTools.toggleSetEndorsed,
         'event:topic_deleted': threadTools.setDeleteState,
         'event:topic_restored': threadTools.setDeleteState,
         'event:topic_purged': onTopicPurged,

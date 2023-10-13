@@ -1,6 +1,8 @@
 'use strict';
 
 
+const posts = require('../../../../src/posts');
+
 define('forum/topic/postTools', [
     'share',
     'navigator',
@@ -114,6 +116,10 @@ define('forum/topic/postTools', [
 
         postContainer.on('click', '[component="post/bookmark"]', function () {
             return bookmarkPost($(this), getData($(this), 'data-pid'));
+        });
+
+        postContainer.on('click', '[component="post/endorse"]', function () {
+            posts.toggleSetEndorsed($(this), getData($(this), 'data-pid'));
         });
 
         postContainer.on('click', '[component="post/upvote"]', function () {
