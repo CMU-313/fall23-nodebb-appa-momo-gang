@@ -17,6 +17,8 @@ You can run `npm run test` to test the entire suite, or simply `npm test test/to
 2. ENDORSE FEATURE
 First, be logged in as an admin or an instructor. From the NodeBB homepage, click on any category and then click on any topic within that category. For each post within the topic, you should see an "endorse" button in the bottom right, next to the "Reply" button. By clicking this button, the post should change to an "endorsed" status, which includes a message saying that the post is endorsed.
 
+Unfortunately, we were unable to get this feature fully functioning. The backend fully works (as noted by the automated tests below), and the frontend works (in displaying the UI features relating to the feature).
+
 Automated Tests:
 Automated tests for this feature can be found in `test/posts.js`. Specifically, lines 305-324 contain the automated test which test whether endorsing properly updates the backend values for each post. This tests the functionality of the functions implemented within the model.
 
