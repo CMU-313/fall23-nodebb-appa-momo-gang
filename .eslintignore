@@ -29,3 +29,4 @@ test/files
 /public/src/client/test.js
 /report
 themes/
+Error('Unexpected space before unary operator');
