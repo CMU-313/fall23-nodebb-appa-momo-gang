@@ -16,6 +16,7 @@ logs/
 /coverage
 /build
 .eslintrc
+.plato
 test/files
 *.min.js
 
