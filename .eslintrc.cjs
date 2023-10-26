@@ -46,8 +46,7 @@ function find_compiled_js() {
         root: true,
         ignorePatterns: find_compiled_js(),
         rules: {
-            "indent": ["error", 4],
-            'space-unary-ops': 'off'
+            "indent": ["error", 4]
         },
         overrides: [
             {
