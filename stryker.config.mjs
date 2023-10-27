@@ -11,10 +11,10 @@ const config = {
   ],
   "ignorePatterns": ["dist", "coverage", "build/public/plugins/**"],
   reporters: ["html", "clear-text", "progress"],
-  testRunner: "mocha",
+  // testRunner: "mocha",
   testRunner_comment:
     "Take a look at (missing 'homepage' URL in package.json) for information about the mocha plugin.",
-  coverageAnalysis: "perTest",
+  // coverageAnalysis: "perTest",
   //buildCommand: "npm run build",
 };
 export default config;
