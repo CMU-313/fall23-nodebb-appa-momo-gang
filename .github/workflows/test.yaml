@@ -195,7 +195,7 @@ jobs:
         uses: actions/upload-artifact@v2
         with:
           name: plato-report
-          path: /report
+          path: report
 
   finish:
     permissions:
