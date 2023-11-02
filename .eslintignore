@@ -16,6 +16,7 @@ logs/
 /coverage
 /build
 .eslintrc
+.plato
 test/files
 *.min.js
 
@@ -27,4 +28,6 @@ test/files
 /public/src/modules/ace-editor.js
 /public/src/client/account/header.js
 /public/src/client/test.js
+/report
 themes/
+Error('Unexpected space before unary operator');
