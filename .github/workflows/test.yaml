@@ -187,6 +187,15 @@ jobs:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           flag-name: ${{ matrix.os }}-node-${{ matrix.node }}-db-${{ matrix.database }}
           parallel: true
+      - name: Install Plato
+        run: npm install -g plato
+      - name: Run Plato
+        run: plato -r -d report src
+      - name: Upload Plato Report
+        uses: actions/upload-artifact@v2
+        with:
+          name: plato-report
+          path: report
 
   finish:
     permissions:
