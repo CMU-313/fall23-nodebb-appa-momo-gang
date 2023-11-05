@@ -15,6 +15,7 @@ logs/
 *.iws
 /coverage
 /build
+.standard
 .eslintrc
 .plato
 test/files
