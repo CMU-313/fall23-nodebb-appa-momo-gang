@@ -1,0 +1,1235 @@
+[33m18:36:33 (75982) WARN ProjectReader[39m Glob pattern "!build/public/plugins/**" did not exclude any files.
+[33m18:36:33 (75982) WARN ProjectReader[39m Glob pattern "path/to/your/require-main.js" did not result in any files.
+[32m18:36:33 (75982) INFO ProjectReader[39m Found 1 of 9757 file(s) to be mutated.
+[32m18:36:33 (75982) INFO Instrumenter[39m Instrumented 1 source file(s) with 69 mutant(s)
+[32m18:36:33 (75982) INFO ConcurrencyTokenProvider[39m Creating 7 test runner process(es).
+[32m18:36:35 (75982) INFO BroadcastReporter[39m Detected that current console does not support the "progress" reporter, downgrading to "progress-append-only" reporter
+[32m18:36:35 (75982) INFO DryRunExecutor[39m Starting initial test run (command test runner with "perTest" coverage analysis). This may take a while.
+[91m18:37:04 (75982) ERROR DryRunExecutor[39m One or more tests failed in the initial test run:
+	All tests
+		
+> nodebb@2.8.1 test
+> npx tsc && nyc --reporter=html --reporter=text-summary mocha
+
+
+info: configJSON
+
+info: {
+    "url": "http://127.0.0.1:4567",
+    "secret": "be8c341c-c01a-4928-82e2-368cae361aff",
+    "database": "redis",
+    "redis": {
+        "host": "127.0.0.1",
+        "port": "6379",
+        "password": "",
+        "database": "0"
+    },
+    "port": "4567",
+    "test_database": {
+        "host": "127.0.0.1",
+        "port": "6379",
+        "password": "",
+        "database": "1"
+    }
+}
+
+info: database config redis {"database":"1","host":"127.0.0.1","password":"","port":"6379"}
+
+info: environment production
+
+
+
+info: test_database flushed
+
+info: Populating database with default configs, if not already set...
+
+
+info: Giving default global privileges...
+
+
+info: Enabling default plugins
+
+
+info: [install/enableDefaultPlugins] activating default plugins {"0":"nodebb-plugin-dbsearch","1":"nodebb-widget-essentials","2":"nodebb-plugin-composer-default"}
+
+info: [socket.io] Restricting access to origin: *:*
+
+(node:76081) [LRU_CACHE_UNBOUNDED] UnboundedCacheWarning: TTL caching without ttlAutopurge, max, or maxSize can result in unbounded memory consumption.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+
+
+warn: [plugins/load] The following plugins may not be compatible with your version of NodeBB. This may cause unintended behaviour or crashing. In the event of an unresponsive NodeBB caused by this plugin, run `./nodebb reset -p PLUGINNAME` to disable it.
+  * nodebb-plugin-dbsearch
+
+
+
+info: [api] Adding 0 route(s) to `api/v3/plugins`
+
+info: [router] Routes added
+
+info: 🎉 NodeBB Ready
+
+info: 🤝 Enabling 'trust proxy'
+
+info: 📡 NodeBB is now listening on: 0.0.0.0:4567
+
+info: 🔗 Canonical URL: http://127.0.0.1:4567
+
+
+  
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+...
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+
+  .
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+
+  .
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+..
+
+  .
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+
+  .
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+
+  .
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+
+  .
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+
+  .
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+..
+.
+..
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+
+  .
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+
+  .
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+..
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+
+  .
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+
+  .
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+
+  .
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+
+  .
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+
+  .
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+
+  .
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+
+  .
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+!
+
+
+
+
+warn [deprecated]
+     at doExport (/Users/zoeangell/Documents/Fall2023/17313/fall23-nodebb-appa-momo-gang/.stryker-tmp/sandbox6696770/src/socket.io/user/profile.js:4:1366)
+    at SocketUser.exportProfile (/Users/zoeangell/Documents/Fall2023/17313/fall23-nodebb-appa-momo-gang/.stryker-tmp/sandbox6696770/src/socket.io/user/profile.js:4:903)
+    at Object.wrapperCallback [as exportProfile] (/Users/zoeangell/Documents/Fall2023/17313/fall23-nodebb-appa-momo-gang/.stryker-tmp/sandbox6696770/src/promisify.js:3:2675)
+     use POST /api/v3/users/:uid/exports/:type
+warn [deprecated]
+     at doExport (/Users/zoeangell/Documents/Fall2023/17313/fall23-nodebb-appa-momo-gang/.stryker-tmp/sandbox6696770/src/socket.io/user/profile.js:4:1366)
+    at SocketUser.exportPosts (/Users/zoeangell/Documents/Fall2023/17313/fall23-nodebb-appa-momo-gang/.stryker-tmp/sandbox6696770/src/socket.io/user/profile.js:4:1068)
+    at Object.wrapperCallback [as exportPosts] (/Users/zoeangell/Documents/Fall2023/17313/fall23-nodebb-appa-momo-gang/.stryker-tmp/sandbox6696770/src/promisify.js:3:2675)
+     use POST /api/v3/users/:uid/exports/:type
+warn [deprecated]
+     at doExport (/Users/zoeangell/Documents/Fall2023/17313/fall23-nodebb-appa-momo-gang/.stryker-tmp/sandbox6696770/src/socket.io/user/profile.js:4:1366)
+    at SocketUser.exportUploads (/Users/zoeangell/Documents/Fall2023/17313/fall23-nodebb-appa-momo-gang/.stryker-tmp/sandbox6696770/src/socket.io/user/profile.js:4:1233)
+    at Object.wrapperCallback [as exportUploads] (/Users/zoeangell/Documents/Fall2023/17313/fall23-nodebb-appa-momo-gang/.stryker-tmp/sandbox6696770/src/promisify.js:3:2675)
+     use POST /api/v3/users/:uid/exports/:type
+error [posts/uploads] Error while saving post upload sizes (files/test.png): Input file contains unsupported image format
+
+info test_database flushed
+info Populating database with default configs, if not already set...
+
+info Giving default global privileges...
+
+
+info Enabling default plugins
+
+
+info [install/enableDefaultPlugins] activating default plugins
+
+error [meta/blacklist] Error parsing client IP : <script>alert("xss")</script>
+
+error POST /login
+Error: ipaddr: the address has neither IPv6 nor IPv4 format
+    at ipaddr.parse (/Users/zoeangell/Documents/Fall2023/17313/fall23-nodebb-appa-momo-gang/node_modules/ipaddr.js/lib/ipaddr.js:929:19)
+    at Blacklist.test (/Users/zoeangell/Documents/Fall2023/17313/fall23-nodebb-appa-momo-gang/.stryker-tmp/sandbox6696770/src/meta/blacklist.js:7:330)
+    at Object.wrapperCallback [as test] (/Users/zoeangell/Documents/Fall2023/17313/fall23-nodebb-appa-momo-gang/.stryker-tmp/sandbox6696770/src/promisify.js:3:2675)
+    at applyBlacklist (/Users/zoeangell/Documents/Fall2023/17313/fall23-nodebb-appa-momo-gang/.stryker-tmp/sandbox6696770/src/middleware/index.js:4:5166)
+    at Layer.handle [as handle_request] (/Users/zoeangell/Documents/Fall2023/17313/fall23-nodebb-appa-momo-gang/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/zoeangell/Documents/Fall2023/17313/fall23-nodebb-appa-momo-gang/node_modules/express/lib/router/route.js:144:13)
+    at csrf (/Users/zoeangell/Documents/Fall2023/17313/fall23-nodebb-appa-momo-gang/node_modules/csurf/index.js:117:5)
+    at middleware.applyCSRF (/Users/zoeangell/Documents/Fall2023/17313/fall23-nodebb-appa-momo-gang/.stryker-tmp/sandbox6696770/src/middleware/index.js:3:1631)
+    at Layer.handle [as handle_request] (/Users/zoeangell/Documents/Fall2023/17313/fall23-nodebb-appa-momo-gang/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/zoeangell/Documents/Fall2023/17313/fall23-nodebb-appa-momo-gang/node_modules/express/lib/router/route.js:144:13)
+    at Route.dispatch (/Users/zoeangell/Documents/Fall2023/17313/fall23-nodebb-appa-momo-gang/node_modules/express/lib/router/route.js:114:3)
+    at Layer.handle [as handle_request] (/Users/zoeangell/Documents/Fall2023/17313/fall23-nodebb-appa-momo-gang/node_modules/express/lib/router/layer.js:95:5)
+    at /Users/zoeangell/Documents/Fall2023/17313/fall23-nodebb-appa-momo-gang/node_modules/express/lib/router/index.js:284:15
+    at Function.process_params (/Users/zoeangell/Documents/Fall2023/17313/fall23-nodebb-appa-momo-gang/node_modules/express/lib/router/index.js:346:12)
+    at next (/Users/zoeangell/Documents/Fall2023/17313/fall23-nodebb-appa-momo-gang/node_modules/express/lib/router/index.js:280:10)
+    at rewrite (/Users/zoeangell/Documents/Fall2023/17313/fall23-nodebb-appa-momo-gang/.stryker-tmp/sandbox6696770/src/controllers/home.js:3:1513)
+    at Layer.handle [as handle_request] (/Users/zoeangell/Documents/Fall2023/17313/fall23-nodebb-appa-momo-gang/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/Users/zoeangell/Documents/Fall2023/17313/fall23-nodebb-appa-momo-gang/node_modules/express/lib/router/index.js:328:13)
+    at /Users/zoeangell/Documents/Fall2023/17313/fall23-nodebb-appa-momo-gang/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/Users/zoeangell/Documents/Fall2023/17313/fall23-nodebb-appa-momo-gang/node_modules/express/lib/router/index.js:346:12)
+    at next (/Users/zoeangell/Documents/Fall2023/17313/fall23-nodebb-appa-momo-gang/node_modules/express/lib/router/index.js:280:10)
+    at Function.handle (/Users/zoeangell/Documents/Fall2023/17313/fall23-nodebb-appa-momo-gang/node_modules/express/lib/router/index.js:175:3)
+    at router (/Users/zoeangell/Documents/Fall2023/17313/fall23-nodebb-appa-momo-gang/node_modules/express/lib/router/index.js:47:12)
+    at Layer.handle [as handle_request] (/Users/zoeangell/Documents/Fall2023/17313/fall23-nodebb-appa-momo-gang/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/Users/zoeangell/Documents/Fall2023/17313/fall23-nodebb-appa-momo-gang/node_modules/express/lib/router/index.js:328:13)
+    at /Users/zoeangell/Documents/Fall2023/17313/fall23-nodebb-appa-momo-gang/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/Users/zoeangell/Documents/Fall2023/17313/fall23-nodebb-appa-momo-gang/node_modules/express/lib/router/index.js:346:12)
+    at next (/Users/zoeangell/Documents/Fall2023/17313/fall23-nodebb-appa-momo-gang/node_modules/express/lib/router/index.js:280:10)
+    at stripLeadingSlashes (/Users/zoeangell/Documents/Fall2023/17313/fall23-nodebb-appa-momo-gang/.stryker-tmp/sandbox6696770/src/middleware/index.js:3:3079)
+    at Layer.handle [as handle_request] (/Users/zoeangell/Documents/Fall2023/17313/fall23-nodebb-appa-momo-gang/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/Users/zoeangell/Documents/Fall2023/17313/fall23-nodebb-appa-momo-gang/node_modules/express/lib/router/index.js:328:13)
+    at /Users/zoeangell/Documents/Fall2023/17313/fall23-nodebb-appa-momo-gang/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/Users/zoeangell/Documents/Fall2023/17313/fall23-nodebb-appa-momo-gang/node_modules/express/lib/router/index.js:346:12)
+    at next (/Users/zoeangell/Documents/Fall2023/17313/fall23-nodebb-appa-momo-gang/node_modules/express/lib/router/index.js:280:10)
+    at Logger.expressLogger (/Users/zoeangell/Documents/Fall2023/17313/fall23-nodebb-appa-momo-gang/.stryker-tmp/sandbox6696770/src/logger.js:21:197)
+    at Layer.handle [as handle_request] (/Users/zoeangell/Documents/Fall2023/17313/fall23-nodebb-appa-momo-gang/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/Users/zoeangell/Documents/Fall2023/17313/fall23-nodebb-appa-momo-gang/node_modules/express/lib/router/index.js:328:13)
+    at /Users/zoeangell/Documents/Fall2023/17313/fall23-nodebb-appa-momo-gang/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/Users/zoeangell/Documents/Fall2023/17313/fall23-nodebb-appa-momo-gang/node_modules/express/lib/router/index.js:346:12)
+    at next (/Users/zoeangell/Documents/Fall2023/17313/fall23-nodebb-appa-momo-gang/node_modules/express/lib/router/index.js:280:10)
+    at /Users/zoeangell/Documents/Fall2023/17313/fall23-nodebb-appa-momo-gang/.stryker-tmp/sandbox6696770/src/middleware/headers.js:3:5697
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async /Users/zoeangell/Documents/Fall2023/17313/fall23-nodebb-appa-momo-gang/.stryker-tmp/sandbox6696770/src/middleware/helpers.js:3:828
+
+error GET /api/self
+Error: [[error:api.master-token-no-uid]]
+    at authenticate (/Users/zoeangell/Documents/Fall2023/17313/fall23-nodebb-appa-momo-gang/.stryker-tmp/sandbox6696770/src/middleware/user.js:5:441)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async /Users/zoeangell/Documents/Fall2023/17313/fall23-nodebb-appa-momo-gang/.stryker-tmp/sandbox6696770/src/middleware/user.js:8:448
+    at async /Users/zoeangell/Documents/Fall2023/17313/fall23-nodebb-appa-momo-gang/.stryker-tmp/sandbox6696770/src/middleware/helpers.js:3:828
+info test_database flushed
+info Populating database with default configs, if not already set...
+
+
+info Giving default global privileges...
+
+
+info Enabling default plugins
+
+info [install/enableDefaultPlugins] activating default plugins
+
+info test_database flushed
+info Populating database with default configs, if not already set...
+
+
+info Giving default global privileges...
+
+info Enabling default plugins
+
+
+info [install/enableDefaultPlugins] activating default plugins
+
+warn [meta/blacklist] 1 invalid blacklist rule(s) were ignored.
+warn [meta/blacklist] 1 invalid blacklist rule(s) were ignored.
+
+info test_database flushed
+info Populating database with default configs, if not already set...
+
+
+info Giving default global privileges...
+
+info Enabling default plugins
+
+info [install/enableDefaultPlugins] activating default plugins
+
+info test_database flushed
+info Populating database with default configs, if not already set...
+
+
+info Giving default global privileges...
+
+
+info Enabling default plugins
+
+info [install/enableDefaultPlugins] activating default plugins
+
+
+
+
+
+  943 passing (21s)
+  1 failing
+
+
+
+  1) minifier
+       .js.bundle() should concat scripts:
+
+      Uncaught AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
++ actual - expected
+
++ '// @ts-nocheck\n' +
++   '(function (window, document) {\n' +
++   '    window.doStuff = function () {\n' +
++   "        document.body.innerHTML = 'Stuff has been done';\n" +
++   '    };\n' +
++   '})(window, document);\n' +
++   '\n' +
++   ';// @ts-nocheck\n' +
++   'function foo(name, age) {\n' +
+- '(function (window, document) {\n' +
+-   '    window.doStuff = function () {\n' +
+-   "        document.body.innerHTML = 'Stuff has been done';\n" +
+-   '    };\n' +
+-   '})(window, document);\n' +
+-   '\n' +
+-   ';function foo(name, age) {\n' +
+    `    return 'The person known as "' + name + '" is ' + age + ' years old';\n` +
+    '}\n'
+      + expected - actual
+
+      -// @ts-nocheck
+       (function (window, document) {
+           window.doStuff = function () {
+               document.body.innerHTML = 'Stuff has been done';
+           };
+       })(window, document);
+       
+      -;// @ts-nocheck
+      -function foo(name, age) {
+      +;function foo(name, age) {
+           return 'The person known as "' + name + '" is ' + age + ' years old';
+       }
+      
+      at /Users/zoeangell/Documents/Fall2023/17313/fall23-nodebb-appa-momo-gang/.stryker-tmp/sandbox6696770/test/build.js:48:20
+      at /Users/zoeangell/Documents/Fall2023/17313/fall23-nodebb-appa-momo-gang/.stryker-tmp/sandbox6696770/src/promisify.js:3:2545
+      at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
+
+
+
+
+
+
+=============================== Coverage summary ===============================
+
+Statements   : 52.35% ( 12805/24459 )
+
+Branches     : 33.44% ( 4073/12177 )
+
+Functions    : 45.53% ( 2042/4484 )
+
+Lines        : 52.91% ( 12425/23483 )
+================================================================================
+
+[91m18:37:04 (75982) ERROR Stryker[39m There were failed tests in the initial test run.
