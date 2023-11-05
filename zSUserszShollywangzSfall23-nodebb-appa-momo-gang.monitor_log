@@ -1,0 +1,18 @@
+Oct 25 23:39:44.575 [info] argv=/Users/hollywang/fall23-nodebb-appa-momo-gang/node_modules/flow-bin/flow-osx-v0.219.4/flow start --flowconfig-name .flowconfig --temp-dir /private/tmp/flow /Users/hollywang/fall23-nodebb-appa-momo-gang
+Oct 25 23:39:44.575 [info] autostop=false
+Oct 25 23:39:44.575 [info] file_watcher=DFind
+Oct 25 23:39:44.575 [info] file_watcher_timeout=120
+Oct 25 23:39:44.575 [info] file_watcher_mergebase_with=master
+Oct 25 23:39:44.575 [info] no_restart=false
+Oct 25 23:39:44.575 [info] shm_heap_size=26843545600
+Oct 25 23:39:44.575 [info] shm_hash_table_pow=19
+Oct 25 23:39:44.575 [info] Creating a new Flow server
+Oct 25 23:39:44.578 [info] Spawned file watcher (pid=16096)
+Oct 25 23:39:44.581 [info] Spawned server #1 (pid=16097)
+Oct 25 23:41:22.183 [info] File watcher reported 1 file changed
+Oct 25 23:41:22.184 [error] Connection 'server #1' was closed from the other side
+Unable to obtain kernel buffer: Operation not permitted
+usage: sudo dmesg
+Oct 25 23:41:22.256 [error] Flow server (pid 16097) exited with code Flowconfig_changed (16)
+Oct 25 23:41:22.256 [info] Monitor is exiting code 16 (Dying along with server)
+Oct 25 23:41:22.256 [info] Broadcasting to threads and waiting 1 second for them to exit
